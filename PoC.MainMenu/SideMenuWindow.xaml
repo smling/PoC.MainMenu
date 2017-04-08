@@ -1,0 +1,29 @@
+﻿<Window x:Class="PoC.MainMenu.SideMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PoC.MainMenu"
+        mc:Ignorable="d"
+        Title="SideMenuWindow" Height="300" Width="300">
+    <DockPanel>
+        <Menu DockPanel.Dock="Left">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="_File" >
+                <MenuItem Header="_Add new Tab" Name="menuItemAddNewTab" Click="menuItemAddNewTab_Click" />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="_Settings" />
+            <MenuItem Header="_Help" />
+        </Menu>
+        <TabControl DockPanel.Dock="Top" Name="tabWorkingBench">
+            <TabItem Header="Start">
+
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>
